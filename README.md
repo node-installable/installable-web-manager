@@ -1,0 +1,2 @@
+# Installable Web Manager
+A simple UI for managing [installable](https://www.npmjs.org/package/installable) plugins. Used as the default (example) web manager on [installable](https://www.npmjs.org/package/installable) apps.
