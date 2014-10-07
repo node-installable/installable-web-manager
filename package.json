@@ -4,7 +4,7 @@
   "description": "A framework for installable plugin based applications",
   "scripts": {
     "prepublish": "node_modules/bower/bin/bower install && node_modules/gulp/bin/gulp.js build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/karma/bin/karma start karma.conf"
   },
   "keywords": [
     "modular",
@@ -18,17 +18,28 @@
     "autoprefixer-loader": "^1.0.0",
     "backbone": "^1.1.2",
     "bower": "^1.3.12",
+    "chai": "^1.9.2",
     "css-loader": "^0.8.0",
     "gulp": "^3.8.0",
     "gulp-jshint": "^1.6.2",
     "gulp-react": "^1.0.2",
     "gulp-rimraf": "^0.1.0",
+    "gulp-spawn-mocha": "^0.4.1",
     "gulp-webpack": "^0.3.0",
+    "istanbul": "^0.3.2",
+    "istanbul-instrumenter-loader": "^0.1.2",
     "jquery": "^2.1.1",
     "jsx-loader": "^0.11.0",
+    "karma": "^0.12.24",
+    "karma-coverage": "^0.2.6",
+    "karma-mocha": "^0.1.9",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-webpack": "^1.2.2",
+    "mocha": "^1.21.4",
     "react": "^0.11.1",
     "react-ladda": "^0.2.4",
     "style-loader": "^0.8.0",
-    "webpack": "^1.4.5"
+    "webpack": "^1.4.5",
+    "webpack-dev-server": "^1.6.5"
   }
 }

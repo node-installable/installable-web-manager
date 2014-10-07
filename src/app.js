@@ -11,7 +11,11 @@ var App = React.createClass({
     render: function () {
         return (
             <div className='plugin-manager'>
-                <header><h3>Installable Plugin Manager</h3></header>
+                <header className='plugin-manager__header'>
+                    <h3 className='plugin-manager__header-title'>
+                        Installable Plugin Manager
+                    </h3>
+                </header>
                 <InstalledModules modules={this.props.installedModules} />
                 <SearchModules
                     searchResults={this.props.searchResults}

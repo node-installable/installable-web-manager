@@ -5,12 +5,17 @@ var jshint = require('gulp-jshint');
 var rimraf = require('gulp-rimraf');
 var webpack = require('gulp-webpack');
 var react = require('gulp-react');
+var karma = require('karma').server;
 
 gulp.task('lint', function () {
-    gulp.src('./src/**/*.js')
-        .pipe(react())
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
+    return gulp.src([
+        './src/**/*.js',
+        './spec/**/*.js',
+        '*.js'
+    ])
+    .pipe(react())
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'));
 });
 
 gulp.task('webpack', function() {
@@ -27,6 +32,13 @@ gulp.task('copy-index', function () {
 gulp.task('clean', function () {
     return gulp.src('./dist/*.*', {read: false})
         .pipe(rimraf());
+});
+
+gulp.task('spec', function (done) {
+    karma.start({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, done);
 });
 
 gulp.task('watch', function() {
@@ -49,6 +61,12 @@ gulp.task('watch', function() {
     gulp.start('copy-index');
 });
 
+gulp.task('tdd', function () {
+    gulp.start('watch');
+    // client specs
+    gulp.watch(['./src/**/*.js', './spec/**/*.js'], ['spec']);
+});
 
 gulp.task('default', ['watch']);
 gulp.task('build', ['copy-index', 'webpack']);
+

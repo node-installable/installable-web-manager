@@ -12,7 +12,7 @@ var InstalledModules = React.createClass({
         };
     },
     componentDidMount: function () {
-        this.props.modules.on('sync', function (collection) {
+        this.props.modules.on('sync', function () {
             this.setState({
                 loaded: true
             });

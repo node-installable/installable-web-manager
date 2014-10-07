@@ -1,8 +1,7 @@
 'use strict';
-
 var Backbone = require('backbone');
 
-var Module = Backbone.Model.extend({
+var Module = exports.Module = Backbone.Model.extend({
     idAttribute: 'name',
     defaults: {
         installed: true
@@ -12,17 +11,12 @@ var Module = Backbone.Model.extend({
     }
 });
 
-exports.Module = Module;
-
-var Modules = Backbone.Collection.extend({
+var Modules = exports.Modules = Backbone.Collection.extend({
     model: Module,
     url: '/installable/api/modules'
 });
 
-
-exports.Modules = Modules;
-
-var SearchModule = Module.extend({
+var SearchModule = exports.SearchModule = Module.extend({
     defaults: {
         installed: false
     }
