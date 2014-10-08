@@ -5,7 +5,7 @@ var React = require('react');
 var LaddaButton = require('react-ladda');
 require('laddacss');
 
-var SearchResult = React.createClass({
+var Module = React.createClass({
     getInitialState: function () {
         return {
             active: false
@@ -60,12 +60,12 @@ var SearchResult = React.createClass({
         );
 
         return (
-            <div className='search-result'>
-                <span className='search-result__name'>{this.props.module.get('name')}</span>
+            <div className='module'>
+                <span className='module__name'>{this.props.module.get('name')}</span>
                 {button}
             </div>
         );
     }
 });
 
-module.exports = SearchResult;
+module.exports = Module;

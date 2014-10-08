@@ -47,7 +47,7 @@ gulp.task('watch', function() {
 
     // lint
     gulp.watch(['./src/**/*.js',
-                './src/**/*.jsx',
+                './spec/**/*.js',
                 './*.js',
                 '!./dist/*.js'
                 ], ['lint']);

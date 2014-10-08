@@ -6,6 +6,7 @@ module.exports = {
         modulesDirectories: ['bower_components', 'node_modules'],
         alias: {
             spin: path.join(__dirname, 'bower_components', 'spin.js', 'spin.js'),
+            'spin.js': path.join(__dirname, 'bower_components', 'spin.js', 'spin.js'),
             ladda: path.join(__dirname, 'bower_components', 'ladda', 'js', 'ladda.js'),
             laddacss: path.join(__dirname, 'bower_components', 'ladda', 'dist', 'ladda.min.css')
         }

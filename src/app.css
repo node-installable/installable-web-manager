@@ -62,12 +62,12 @@ input {
     margin-top: 80px;
 }
 
-.search-result {
+.module {
     height: 40px;
     margin-top: 7px;
 }
 
-    .search-result__name {
+    .module__name {
         display: inline-block;
         padding-top: 8px;
     }

@@ -42,17 +42,11 @@ var InstalledModules = React.createClass({
             message = <p>Loading...</p>;
         }
 
-        if (rows.length) {
-            return (
-                <section className="installed-modules">{rows}</section>
-            );
-        } else {
-            return (
-                <section className="installed-modules">
-                    {message}
-                </section>
-            );
-        }
+        return (
+            <section className="installed-modules">
+                {rows.length ? rows : message}
+            </section>
+        );
     }
 });
 

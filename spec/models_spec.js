@@ -22,10 +22,6 @@ describe('models', function () {
                 expect(this.subject.id).to.equal('lola');
             });
 
-            it('should use name as ID', function () {
-                expect(this.subject.id).to.equal('lola');
-            });
-
             it('should have default value for installed', function () {
                 expect(this.subject.get('installed')).to.equal(true);
             });
