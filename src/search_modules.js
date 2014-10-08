@@ -17,7 +17,8 @@ var SearchModules = React.createClass({
 
         this.props.searchResults.on('sync', function () {
             this.setState({
-                searching: false
+                searching: false,
+                searched: true
             });
         }.bind(this));
 
@@ -47,15 +48,13 @@ var SearchModules = React.createClass({
         }
     },
     render: function () {
-        var installedModules = this.props.installedModules;
-
-        var rows = this.props.searchResults.map(function (module) {
+        var rows = this.state.modules.map(function (module) {
             return (
                 <Module module={module}
                         key={module.get('name')}
-                        installedModules={installedModules}/>
+                        installedModules={this.props.installedModules}/>
             );
-        });
+        }.bind(this));
 
         var content;
 
