@@ -1,7 +1,7 @@
 {
   "name": "installable-web-manager",
   "version": "0.0.1",
-  "description": "A framework for installable plugin based applications",
+  "description": "A simple UI for managing installable plugins",
   "scripts": {
     "prepublish": "node_modules/bower/bin/bower install && node_modules/gulp/bin/gulp.js build",
     "test": "node_modules/karma/bin/karma start karma.conf"
