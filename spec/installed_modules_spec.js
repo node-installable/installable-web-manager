@@ -2,13 +2,12 @@
 /* jshint expr: true */
 'use strict';
 require('es5-shim');
-var expect = require('chai').expect;
 var TU = require('react/addons').addons.TestUtils;
 
 var InstalledModules = require('../src/installed_modules');
 var models = require('../src/models');
 
-describe.only('InstalledModules', function () {
+describe('InstalledModules', function () {
     beforeEach(function () {
         this.modules = new models.Modules();
         this.subject = <InstalledModules modules={this.modules} />;

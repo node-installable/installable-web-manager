@@ -22,8 +22,6 @@ var SearchModules = React.createClass({
         }.bind(this));
 
         this.props.searchResults.on('add remove', function (model, collection) {
-            console.log('this', this);
-            console.log('args', arguments);
             this.setState({
                 modules: collection,
                 searched: true,

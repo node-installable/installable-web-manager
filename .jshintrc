@@ -33,6 +33,7 @@
         "module": true,
         "describe": true,
         "it": true,
-        "beforeEach": true
+        "beforeEach": true,
+        "expect": true
     }
 }

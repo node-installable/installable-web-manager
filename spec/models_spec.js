@@ -1,7 +1,6 @@
 'use strict';
 var Backbone = require('backbone');
 var models = require('../src/models');
-var expect = require('chai').expect;
 
 describe('models', function () {
     describe('Module', function () {

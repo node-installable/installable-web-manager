@@ -18,6 +18,9 @@ var Module = React.createClass({
             wait: true,
             success: function () {
                 self.props.module.set({installed: false});
+                if (self.isMounted()) {
+                    self.setState({active: false});
+                }
                 self.props.installedModules.remove(self.props.module);
             }
         });
