@@ -13,6 +13,14 @@
   ],
   "author": "Nikos Gereoudakis <nikos@gereoudakis.me>",
   "license": "MIT",
+  "homepage": "https://github.com/node-installable/installable-web-manager",
+  "repository" : { 
+    "type" : "git",
+    "url" : "https://github.com/node-installable/installable-web-manager.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/node-installable/installable-web-manager/issues"
+  },
   "dependencies": {},
   "devDependencies": {
     "autoprefixer-loader": "^1.0.0",
@@ -42,5 +50,8 @@
     "style-loader": "^0.8.0",
     "webpack": "^1.4.5",
     "webpack-dev-server": "^1.6.5"
+  },
+  "testling": {
+    "files": "spec/*.js"
   }
 }
